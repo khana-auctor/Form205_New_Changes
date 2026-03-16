@@ -1,0 +1,1333 @@
+﻿.fixed-textbox {
+    resize: none;
+    overflow-y: scroll;
+    width: 527px;
+    height: 349px;
+    padding: 8px;
+    border: 1px solid #999;
+    font-family: Verdana;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-kerning: none;
+    font-variant-ligatures: none;
+    font-feature-settings: "kern" 0, "liga" 0;
+}
+
+/*Target IE Mode specifically*/
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .fixed-textbox {
+        font-size: 15px; /* Compensate for rendering differences*/
+        font-weight: 600; /* Appears thinner in IE mode, so use heavier weight*/
+        letter-spacing: normal; /* Reset any tight letter-spacing*/
+    }
+}
+
+
+.ie-edge-dropdown {
+    font-family: Verdana;
+    font-size: 9pt;
+    display: inline-block;
+    width: 230px;
+    min-width: 230px;
+    max-width: 230px;
+    padding: 2px 30px 2px 4px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='gray' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 16px 16px;
+    transition: border-color 0.2s ease-in-out;
+    outline: auto;
+    appearance: auto;
+    -webkit-appearance: auto;
+    -moz-appearance: none;
+}
+
+/*Explicit border on focus*/
+.ie-edge-dropdown:focus {
+    border: 1px solid #999;
+    outline: auto;
+    background-color: #fff;
+}
+
+/*Optional: hover effect*/
+.ie-edge-dropdown:hover {
+    border: 1px solid #888;
+}
+
+input.disable[readonly],
+input.disable[disabled],
+textarea.disable[readonly],
+textarea.disable[disabled] {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #999;
+    resize: none;
+    overflow: hidden;
+    cursor: not-allowed;
+}
+
+
+html body, html body * {
+    font-family: "Segoe UI", Arial, Tahoma, sans-serif !important;
+}
+
+body {
+    font-family: "Segoe UI", Arial, Tahoma, sans-serif; /* Modern stack */
+    font-size: 14px;
+    font-weight: normal;
+    color: #000;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+.ie-edge-label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: normal; /* Changed from 600 to normal*/
+    color: #000000;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 4px;
+}
+
+input[type="checkbox"] + label.ie-edge-label {
+    margin-left: 6px;
+}
+
+select, input[type="checkbox"] {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+}
+
+td.form-label {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    padding: 4px;
+    vertical-align: top;
+    width: 350px; /* Match your table column width */
+    box-sizing: border-box;
+}
+
+.custom-radio input[type="radio"] {
+    appearance: auto;
+    -webkit-appearance: auto;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #555;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 6px; /* spacing between radio and label */
+}
+
+    /*Center the dot inside the radio when checked*/
+    .custom-radio input[type="radio"]:checked::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 8px;
+        height: 8px;
+        background-color: #555;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+/*Align label text with radio button*/
+.custom-radio label {
+    vertical-align: middle;
+    font-family: Verdana;
+    font-size: 9pt;
+    cursor: pointer;
+}
+
+.align-cell {
+    vertical-align: middle;
+    text-align: center;
+    padding: 0;
+}
+
+.textbox-container {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+}
+
+.hidden-file {
+    display: none;
+}
+
+/*Target both button types explicitly*/
+input[type="button"].ie-upload-button,
+input[type="submit"].ie-upload-button {
+    background: linear-gradient(to bottom, #f4f4f4 0%, #dcdcdc 100%);
+    border: 1px solid #8a8a8a;
+    border-bottom-color: #b3b3b3;
+    border-right-color: #b3b3b3;
+    border-radius: 3px;
+    padding: 3px 12px;
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    font-size: 12px;
+    color: #000000;
+    cursor: pointer;
+    box-shadow: inset 0 1px 0 #ffffff, 0 1px 0 rgba(255,255,255,0.5);
+    text-shadow: 0 1px 0 #ffffff;
+    height: 24px !important;
+    line-height: 18px;
+    font-weight: 500 !important;
+    outline: auto;
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    min-width: 80px;
+    /*Remove default browser styling*/
+    appearance: auto;
+    -webkit-appearance: auto;
+    -moz-appearance: none;
+    margin: 0;
+}
+
+    /*NO hover state - remove the hover effect completely 
+     Active state for both - ONLY when clicked */
+    input[type="button"].ie-upload-button:active,
+    input[type="submit"].ie-upload-button:active {
+        background: linear-gradient(to bottom, #cde3ff 0%, #a7c6f0 100%);
+        border-color: #5b7cac;
+        border-top-color: #7da2ce;
+        border-left-color: #7da2ce;
+        box-shadow: inset 0 1px 2px rgba(0,0,0,0.2);
+    }
+
+
+.clearable {
+    position: relative;
+    display: inline-block;
+}
+
+ 
+    .clearable input[type="text"],
+    .clearable input[type="search"],
+    .clearable input[type="email"],
+    .clearable input[type="tel"],
+    .clearable input[type="url"],
+    .clearable input[type="number"],
+    .clearable input:not([type]),
+    .clearable textarea {
+        padding-right: 24px;
+        outline: auto;
+        border: none !important;
+        background-color: transparent;
+        box-shadow: revert !important;
+        resize: none; /*Prevent resizing for textareas */
+        -webkit-appearance: auto !important; /*✅ keep native look in Edge */
+        appearance: auto !important;
+    }
+
+        /*Remove focus styles for both*/
+        .clearable input[type="text"]:focus,
+        .clearable textarea:focus {
+            border: revert !important; /*✅ keep native focus border */
+            outline: auto;
+            box-shadow: none !important;
+        }
+
+    /*DO NOT revert buttons (keep your styling) */
+    .clearable button,
+    .clearable input[type="button"],
+    .clearable input[type="submit"],
+    .clearable input[type="reset"] {
+        border: inherit !important; /* or your existing button border 
+ */
+        appearance: auto !important;
+        -webkit-appearance: auto !important;
+        box-shadow: inherit !important;
+    }
+
+/*Clear button styling*/
+.clear-btn {
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-weight: 700;
+    color: #888;
+    font-size: 16px;
+    line-height: 1;
+    display: none;
+}
+
+/*Hidden/visible states for grdUtility and grdAttendance*/
+.hidden-input {
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+.visible-input {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transition: opacity 0.15s ease;
+}
+
+.inline-textbox {
+    display: inline-block;
+    vertical-align: middle;
+    border-style: none;
+    border-bottom: 1px solid #000;
+    width: 185px; /*or adjust as needed */
+ 
+}
+
+.custom-clearable {
+    position: relative;
+    display: inline-block;
+}
+
+/*Base input style (solid border for non-empty)*/
+.custom-clearable .custom-clear-input {
+    padding-right: 22px;/*  space for the × button */
+    /*border: 1px solid #000;  
+    outline: auto;*/ /* optional */ 
+    box-shadow: none; /* optional */ 
+}
+
+    .custom-clearable .custom-clear-input.is-empty {
+        border: 1px dashed red; /* Changed from 'dashed' to 'dotted' */
+    }
+
+
+
+/*Custom clear button*/
+.custom-clear-btn {
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-weight: bold;
+    color: #888;
+    font-size: 16px;
+    display: none;
+    background: transparent;
+}
+
+.label-text {
+    font-size: 12px; 
+    font-family: "Times New Roman", serif; 
+    margin-right: 4px;
+}
+
+
+/*Ensure table rows can expand*/
+table tr {
+    height: auto; 
+}
+
+/*This targets the specific div classes in your table cells*/
+.auto-style119, .auto-style120, .auto-style118, .auto-style122, .auto-style124, .auto-style101, .auto-style114, .auto-style78, .auto-style116 {
+    white-space: normal !important;
+    height: auto !important; 
+    vertical-align: top; 
+    overflow-wrap: break-word; 
+}
+
+/*Also ensure table cells allow wrapping*/
+td {
+    white-space: normal !important;
+}
+
+div[style*="font-size: 10pt"] {
+    font-size: inherit !important;
+}
+
+.clearable {
+    position: relative;
+    display: inline-block;
+}
+
+
+
+.visible-input,
+.hidden-input {
+    padding-right: 28px;
+    box-sizing: border-box;
+}
+
+.clear-btn {
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: initial;
+    background: transparent;
+    color: #666;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+}
+
+/*Show clear button ONLY when input is focused AND has value*/
+.visible-input:focus ~ .clear-btn,
+.hidden-input:focus ~ .clear-btn {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/*Hide clear button when input is empty*/
+.visible-input:not(:placeholder-shown):focus ~ .clear-btn,
+.hidden-input:not(:placeholder-shown):focus ~ .clear-btn {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.clearable[data-active="true"] .clear-btn,
+.clearable[data-has-value="true"] .clear-btn {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+
+input[type="checkbox"] {
+    appearance: auto;
+    -webkit-appearance: auto;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #999; 
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    border-radius: 2px;
+    outline: auto;
+}
+
+/*Optional: subtle focus style*/
+input[type="checkbox"]:focus {
+    outline: auto;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+/*Checkmark*/
+input[type="checkbox"]::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 10px;
+    border: solid #000;
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -50%) rotate(45deg); 
+    display: none;
+}
+
+/*Show checkmark when checked*/
+input[type="checkbox"]:checked::after {
+    display: block;
+}
+
+/*Default radio button style*/
+input[type="radio"] {
+    appearance: auto;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ccc; 
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    background-color: transparent; 
+}
+
+/*Checked state: light blue border + inner black dot*/
+input[type="radio"]:checked {
+    border: 2px solid lightblue;
+}
+
+/*Inner black dot when checked*/
+input[type="radio"]:checked::before {
+    content: "";
+    width: 8px; 
+    height: 8px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+/*FIXED CSS for grdSubcontractor*/
+#grdSubcontractor .clearable.active.has-value .clear-btn {
+    opacity: 1 !important;
+    pointer-events: auto !important; 
+}
+
+/*Base state - hidden but CLICKABLE*/
+#grdSubcontractor .clear-btn {
+    position: absolute !important;
+    right: 6px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    border: 0 !important;
+    background: transparent !important;
+    color: #000 !important;
+    font-size: 22px !important;
+    font-weight: normal !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    pointer-events: auto !important; /* ADD THIS INSTEAD 
+ */
+    transition: opacity 0.15s ease !important;
+    z-index: 1 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    outline: none !important;
+    box-shadow: none !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+}
+
+/*Base styles*/
+#grdSubcontractor .clearable {
+    position: relative !important;
+    display: inline-block !important;
+}
+
+.valid-phone {
+    border: initial !important;
+    outline: auto !important;
+}
+
+
+.compact-grid textarea {
+    height: 30px !important;
+    min-height: 30px !important;
+    max-height: 30px !important;
+    line-height: 1.2 !important;
+    overflow: hidden !important;
+}
+
+.disable.animated {
+    height: 30px !important;
+    min-height: 40px !important;
+    max-height: 45px !important;
+    overflow: hidden !important;
+}
+
+:root {
+    --textarea-width: 589px;
+    --textarea-height: 40px;
+    --textarea-padding: 8px 12px;
+    --textarea-font-size: 14px;
+    --textarea-line-height: 1.25;
+}
+
+textarea {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: var(--textarea-font-size);
+    line-height: var(--textarea-line-height);
+    resize: none;
+    overflow-wrap: break-word;
+    padding: var(--textarea-padding);
+}
+
+ textarea.fixed,
+    textarea.animated {
+        width: var(--textarea-width);
+        height: var(--textarea-height);
+        border: 1px solid #ccc;
+        overflow: hidden !important; 
+ padding: var(--textarea-padding);
+}
+
+
+
+/*Specifically target your textarea with the animated class*/
+textarea.animated {
+    overflow: hidden !important;
+}
+
+/*SPECIFIC FIX - Add this to your existing CSS*/
+div[align="center"] strong {
+    font-weight: 700 !important;
+    display: block;
+    line-height: 1.2;
+    margin: 0;
+    padding: 2px 0;
+}
+
+div[align="center"] {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/*Optional: If you need even more consistency*/
+td[style*="background-color: #cbd8eb"] div[align="center"] {
+    min-height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*FIXED CSS for grdSubcontractor*/
+#grdSubcontractor .clearable.active.has-value .clear-btn {
+    opacity: 1 !important;
+    pointer-events: auto !important; 
+}
+
+/*Base state - hidden*/
+#grdRep .clear-btn {
+    position: absolute !important;
+    right: 6px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    border: initial !important;
+    background: transparent !important;
+    color: #000 !important;
+    font-size: 22px !important;
+    font-weight: normal !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    opacity: 0 !important;
+    pointer-events: auto !important;
+    transition: opacity 0.15s ease !important;
+    z-index: 1 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 20px !important;
+    height: 20px !important;
+}
+
+/*Base styles*/
+#grdRep .clearable {
+    position: relative !important;
+    display: inline-block !important;
+}
+
+/*Show clear button ONLY when textbox is focused*/
+#grdRep .clearable:focus-within .clear-btn {
+    opacity: 0.6 !important;
+}
+
+/*=== CLEAR BUTTON GRID FIX ===*/
+table[id*="grd"] td {
+    overflow: visible !important;
+    position: relative !important;
+}
+
+.tc-row {
+    white-space: nowrap;
+    margin-bottom: 4px;
+}
+
+.tc-label {
+    display: inline-block;
+    width: 220px;
+    vertical-align: bottom;
+    font-family: Verdana;
+}
+
+.tc-field {
+    display: inline-block;
+    width: 210px;
+    vertical-align: bottom;
+}
+
+.tc-phone-label {
+    display: inline-block;
+    width: 60px;
+    text-align: right;
+    margin-left: 12px;
+    vertical-align: bottom;
+}
+
+.tc-phone {
+    display: inline-block;
+    width: 170px;
+    vertical-align: bottom;
+}
+
+.input-container,
+.textbox-with-clear {
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+/*Kill browser scroll anchoring for Material section*/
+.no-scroll-anchor,
+.no-scroll-anchor * {
+    overflow-anchor: none !important;
+}
+
+/*GridView / table-specific fix*/
+.no-scroll-anchor table,
+.no-scroll-anchor tr,
+.no-scroll-anchor td {
+    overflow-anchor: none !important;
+}
+
+.kdot-label {
+    display: inline-block;
+    width: 250px;
+    white-space: nowrap;
+}
+
+#divBottom {
+    height: 0 !important;
+    min-height: 0 !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+
+
+
+/*=== OVERRIDES TO BEAT INLINE STYLES & THEME RULES ===
+
+Make the compact class stronger than any inline style on textarea*/
+textarea.textarea-compact {
+    height: 18px !important; 
+    width: 624px !important; 
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    min-height: 0 !important; 
+    line-height: 16px !important;
+    overflow: hidden !important; 
+    resize: none !important; 
+    white-space: nowrap !important; 
+    border: 1px solid #ccc !important;
+    overflow-wrap: normal !important; 
+    appearance: auto !important; 
+}
+
+/*Neutralize theme-specific behaviors (e.g., .animated adds spacing/transform)*/
+.textarea-compact.animated {
+    transform: none !important;
+    margin: 0 !important;
+    padding: 0 2px !important; 
+    line-height: 16px !important;
+}
+
+html {
+    scroll-behavior: auto !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: auto;
+}
+
+table.compact-grid th {
+    white-space: normal !important;
+    line-height: 14px !important;
+    height: 32px !important;
+    text-align: center;
+}
+
+/*Compact legacy table (non-GridView)*/
+table.ie-compact-table {
+    border-collapse: collapse !important;
+    border-spacing: 0 !important;
+    table-layout: fixed;
+    font-size: 10pt;
+}
+
+/*=========================================
+Reusable compact legacy tables (IE-like)
+Add class="ie-compact-table" to any table
+=========================================*/
+
+table.ie-compact-table {
+    border-collapse: collapse !important;
+    border-spacing: 0 !important;
+    table-layout: fixed; 
+    font-size: 10pt;
+}
+
+/*Tighten cells (overrides inline padding differences)*/
+table.ie-compact-table td,
+table.ie-compact-table th {
+    padding: 0 3px !important;
+    line-height: 18px !important;
+    vertical-align: middle !important;
+}
+
+/*Make header rows compact + allow two-line headers*/
+table.ie-compact-table tr:first-child td,
+table.ie-compact-table tr:first-child th {
+    line-height: 14px !important;
+    height: 32px !important;
+}
+
+/*Compact ALL MultiLine TextBoxes (textarea) in these tables*/
+table.ie-compact-table textarea {
+    height: 18px !important;
+    min-height: 18px !important;
+    max-height: 18px !important;
+    line-height: 18px !important;
+    padding: 0 2px !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    resize: none !important;
+    display: block !important;
+    box-sizing: border-box !important;
+}
+
+/*=========================================
+Force textarea to LOOK single-line (IE)
+Reusable across the app
+=========================================*/
+
+textarea.single-line-textarea {
+    height: 20px !important;
+    min-height: 20px !important;
+    max-height: 20px !important;
+    line-height: 20px !important;
+    padding: 0 4px !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    resize: none !important;
+    white-space: nowrap !important;
+    box-sizing: border-box !important;
+}
+
+/*Starts like a single-line textbox, but can grow*/
+textarea.grow-singleline {
+    height: auto !important;
+    min-height: 20px !important; 
+    line-height: 20px !important;
+    padding: 0 4px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    resize: none !important;
+}
+
+/*Base – keep exactly what IE uses
+===== IE-matching text block (use on the big content TDs) =====*/
+.ie-font-block,
+.ie-font-block * {
+    font-family: Verdana, Arial, sans-serif !important;
+    font-size: 13px !important;
+    line-height: 16px !important;
+    font-weight: 400 !important;
+    color: #000 !important;
+    text-shadow: none !important;
+    -webkit-text-stroke: 0 !important;
+}
+
+/*Preserve bold*/
+.ie-font-block strong,
+.ie-font-block b {
+    font-weight: 700 !important;
+}
+
+/*Edge-only: make it lighter to match IE*/
+@supports (-webkit-text-size-adjust: 100%) {
+    .ie-font-block, .ie-font-block *
+
+{
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeSpeed;
+    font-weight: 300 !important; /* lighter; tune 360–395 
+ */
+    letter-spacing: -0.06px; /* tiny density reduction 
+ */
+}
+
+}
+
+/*Only the td/tr that contains txtProjMatAdditional*/
+td.grow-td {
+    height: auto !important;
+    overflow: visible !important;
+}
+
+tr.grow-tr {
+    height: auto !important;
+    overflow: visible !important;
+}
+
+/*The textarea itself*/
+td.grow-td textarea[id$="txtProjMatAdditional"] {
+    height: auto !important;
+    max-height: none !important;
+    overflow: hidden !important;
+    resize: none !important;
+    display: block !important;
+}
+
+textarea[id$="txtCorrespond"] {
+    font-size: 9pt !important; 
+    line-height: 14px !important; 
+    padding: 0 2px !important;
+    margin: 0 !important;
+    height: 43px !important;
+    min-height: 43px !important;
+    max-height: none !important;
+    overflow: hidden !important;
+    resize: none !important;
+    box-sizing: border-box !important;
+    white-space: pre-wrap !important;
+}
+
+
+
+/*4) Never show focus outline on clear X / buttons*/
+button:focus,
+input[type="button"]:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+.clear-btn:focus,
+.custom-clear-btn:focus,
+#grdSubcontractor .clear-btn:focus,
+#grdRep .clear-btn:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+
+/*// Add focus ring for all inputs and textareas*/
+input:focus, textarea:focus, select:focus {
+    
+}
+
+/*Ensure dropdown gets custom focus styles*/
+.ie-edge-dropdown:focus {
+    outline: 3px solid #ff6600;
+    box-shadow: none;
+}
+
+/*Remove auto outline for the custom focus ring*/
+.ie-edge-dropdown:focus {
+    outline: 3px solid #ff6600 !important;
+    box-shadow: none;
+}
+
+#grdCC_ctl02_txtAdditionalCC {
+    outline: none !important;
+    box-shadow: none !important; 
+}
+
+    #grdCC_ctl02_txtAdditionalCC:focus {
+        outline: none !important;
+        box-shadow: var(--kdot-inner-ring) !important; 
+    }
+
+/*Optional keyboard-only*/
+#grdCC_ctl02_txtAdditionalCC:focus:not(:focus-visible) {
+    box-shadow: none !important;
+}
+
+input.mouse-focused,
+button.mouse-focused,
+.mouse-focused {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+input[type="button"].ie-upload-button,
+input[type="submit"].ie-upload-button {
+    outline: none !important;
+    box-shadow: inset 0 1px 0 #ffffff, 0 1px 0 rgba(255,255,255,0.5); 
+}
+
+/*Kill Edge/Chromium focus ring on this dropdown*/
+select.ie-edge-dropdown:focus,
+select.ie-edge-dropdown:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+    border: 1px solid #808080 !important;
+}
+/*Optional: prevent any highlight on click (Chromium)*/
+select.ie-edge-dropdown::-moz-focus-inner {
+    border: 0;
+}
+
+/*When the dropdown is focused/open, never show the dotted red required border*/
+select.ie-edge-dropdown:focus,
+select.ie-edge-dropdown:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+    border-style: solid !important; 
+    border-width: 1px !important;
+    border-color: #808080 !important; 
+}
+
+/*Remove outline only when NOT focused (keeps true focus ring)*/
+table[id*="grdRep"] textarea:not(:focus) {
+    outline: none !important;
+}
+
+/*=========================================================
+IE-STYLE CHECKBOX — larger, centered check
+=========================================================*/
+input[type="checkbox"] {
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-color: #fff !important;
+    border: 1px solid #000 !important;
+    border-radius: 2px !important;
+    box-sizing: border-box !important;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+/*Checked background stays white*/
+input[type="checkbox"]:checked {
+    background-color: #fff !important;
+}
+
+/*IE-style checkmark — visually centered*/
+input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 2px;
+    width: 6px;
+    height: 11px;
+    border: solid #000;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    box-sizing: border-box;
+}
+
+/*Focus: inner black ring (no blue glow)*/
+input[type="checkbox"]:focus,
+input[type="checkbox"]:focus-visible {
+    outline: none !important;
+    box-shadow: inset 0 0 0 1px #000 !important;
+}
+/*
+Base: never show focus visuals on checkboxes unless we decide to*/
+input[type="checkbox"] {
+    outline: none !important;
+    box-shadow: none !important; 
+}
+
+
+     input[type="checkbox"]:focus-visible {
+        outline: 1px solid #9a9a9a !important; 
+        outline-offset: 2px !important;
+        box-shadow: none !important;
+    }
+
+     /*If some library adds a literal .focus-visible class (polyfill), neutralize it*/ 
+    input[type="checkbox"].focus-visible {
+        outline: 1px solid #9a9a9a !important;
+        outline-offset: 2px !important;
+        box-shadow: none !important;
+    }
+
+ /*If any wrapper uses :focus-within to add a ring, neutralize it for checkboxes*/ 
+.checkbox-wrapper:focus-within,
+.checkbox-wrapper *:focus-within {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.sig-label {
+    font-family: "Segoe UI", Arial, Tahoma, sans-serif;
+    font-size: 13px;
+}
+
+.kdot-grid-header th {
+    font-family: "Segoe UI", Arial, Tahoma, sans-serif !important;
+    font-size: 13.3333px !important;
+    font-weight: 700 !important;
+}
+
+.kdot-body-text {
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 13px !important; 
+    font-optical-sizing: auto !important;
+    font-weight: normal !important;
+    line-height: 1.35 !important;
+    color: #000 !important;
+    letter-spacing: 0.02em;
+}
+
+
+#AttendenceSection textarea.allow-grow {
+    box-sizing: border-box !important;
+    width: 100% !important;
+    min-height: 18px !important;
+    line-height: 18px !important;
+    max-height: none !important;
+    padding: 0 2px !important;
+    overflow: hidden !important;
+    resize: none !important;
+    white-space: pre-wrap !important;
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+}
+
+input.hasDatepicker {
+    padding-right: 0 !important;
+}
+
+table.promptpay-table {
+    height: auto !important;
+}
+
+ /*Apply your font settings directly to the rendered radio labels*/ 
+.kdot-body-text label {
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 13px !important;
+    font-weight: normal !important;
+    line-height: 1.35 !important;
+    color: #000 !important;
+}
+
+textarea.grow-textarea.grow-singleline {
+    height: auto !important;
+    min-height: 20px !important; 
+    max-height: none !important;
+    line-height: 20px !important;
+    padding: 0 4px !important;
+    overflow: hidden !important;
+    resize: none !important;
+    box-sizing: border-box !important;
+}
+
+ /*Beat your height locks in compact/table contexts*/ 
+.compact-grid textarea.grow-textarea.grow-singleline,
+table.ie-compact-table textarea.grow-textarea.grow-singleline,
+textarea.animated.grow-textarea.grow-singleline,
+textarea.fixed.grow-textarea.grow-singleline,
+textarea.disable.grow-textarea.grow-singleline {
+    height: auto !important;
+    min-height: 20px !important;
+    max-height: none !important;
+}
+
+textarea.allow-grow.valid-field {
+    border-bottom: 0 !important;
+    border: 0 !important;
+}
+
+ /*Any phone field (uses formatPhone) should NOT get valid-field bottom underline */
+textarea.valid-field[onchange*="formatPhone"] {
+    border-bottom: 0 !important;
+    border: 0 !important;
+}
+
+ /*Keep a normal textbox border even if markup ends up with border-width:0 */
+input.disable[data-txt-clear="1"].hasDatepicker,
+input.disable[data-txt-clear="1"] {
+    border: 1px solid #ccc;
+}
+
+/* Keep the input in-flow so datepicker positions correctly,
+   but make it visually invisible and non-interactive. */
+#dteEarlyStart,
+#dteLateStart,
+#dteTentStart {
+    position: relative !important; /* NOT absolute 
+ */    left: auto !important; /* remove -99999px 
+ */    top: auto !important;
+    width: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+    outline: 0 !important;
+    background: transparent !important;
+    opacity: 0 !important; /* invisible 
+ */    pointer-events: none !important; /* can't click/focus 
+ */    overflow: hidden !important;
+}
+
+/* Force readonly textbox to look normal (not greyed out)*/ 
+input[readonly] {
+    background-color: #fff !important;
+    color: #000 !important;
+    opacity: 1 !important;
+}
+
+.phone-small {
+    width: 120px !important; /* adjust to what you want 
+ */    min-width: 120px !important;
+    max-width: 120px !important;
+    box-sizing: border-box !important;
+}
+
+
+ /*IE-like "(Not Applicable)" read-only textboxes: look like plain text*/
+#txtAsphPaving,
+#txtConcPaving,
+#txtStructures {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+    padding-right: 0 !important;
+    vertical-align: baseline !important;
+    height: 16px !important;
+    line-height: 16px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    color: #000 !important;
+}
+
+ /*Only this textbox gets black underline*/ 
+#txtMtgAdjourned {
+    border-top: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid #000 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+    background-color: #fff !important;
+}
+
+ /*Make focus obvious ONLY for ReviewAction*/ 
+#UCSubmit1_ReviewAction:focus,
+#UCSubmit1_ReviewAction:focus-visible {
+    outline: 2px dotted #000 !important; /* IE-ish 
+ */    outline-offset: 1px !important;
+}
+
+ /*Normal state: remove the weird edge*/ 
+textarea.disable.animated:not(.sig-box) {
+    border-style: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+ /*Keyboard focus ring (Edge/Chrome)*/ 
+textarea.disable.animated:focus-visible {
+    outline: 2px solid #000 !important;
+    outline-offset: -2px !important; 
+
+}
+
+textarea.disable.animated:focus {
+    outline: 2px solid #000 !important;
+    outline-offset: -2px !important;
+}
+
+input.disable.visible-input {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    background-image: none !important;
+}
+
+ /*Kill the phantom grey right edge on clearable disabled inputs*/
+input.disable.textbox-with-clear {
+    /* border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    background-image: none !important;
+    border-radius: 0 !important; */
+}
+
+    input.disable.textbox-with-clear:focus-visible {
+        outline: 2px solid #000 !important;
+        outline-offset: -2px !important;
+    }
+
+      
+    input.disable.textbox-with-clear:focus {
+        outline: 2px solid #000 !important;
+        outline-offset: -2px !important;
+    }
+
+#txtGrading {
+    border: none !important;
+    border-bottom: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+    #txtGrading:focus {
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+
+ /*Match txtCounty look exactly*/
+#UCHeader1_CurrentTaskName,
+#UCHeader1_ReferenceId,
+#txtAreaEngineer,
+#FedProjectNumber {
+    background-color: #f0f0f0 !important;
+    color: #000000 !important;
+    opacity: 1 !important;
+    -webkit-text-fill-color: #000000 !important;
+}
+
+
+
+#dteEarlyStart,
+#dteLateStart,
+#dteTentStart {
+    display: none !important;
+}
+
+#txtSectiontext2,
+#txtSectiontext3,
+#txtSectiontext4 {
+    background-color: #fff !important; /* remove grey readonly look */
+    color: #000 !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    pointer-events: none !important; /* not clickable */
+}
+
+input.ie-upload-button:focus,
+input.ie-upload-button:focus-visible,
+button.ie-upload-button:focus,
+button.ie-upload-button:focus-visible {
+    outline: 1px dotted #000 !important;
+    outline-offset: 0 !important;
+    box-shadow: none !important;
+}
